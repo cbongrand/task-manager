@@ -4,13 +4,13 @@
   <li>
   <% if task.completed %>
   <%= link_to "✅ #{task.title}", task_path(task.id) %>
-  <%= link_to "Edit", task_edit_path(task.id) %>
+  <%= link_to "Edit", edit_task_path(task.id) %>
   <%= link_to "Delete", task_path(task),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
   <% else %>
   <%= link_to "❌ #{task.title}", task_path(task.id) %>
-  <%= link_to "Edit", task_edit_path(task.id) %>
+  <%= link_to "Edit", edit_task_path(task.id) %>
   <%= link_to "Delete", task_path(task),
             method: :delete,
             data: { confirm: "Are you sure?" } %>  <% end %>
